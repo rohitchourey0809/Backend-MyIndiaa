@@ -47,7 +47,7 @@ This project is a backend application for an e-commerce platform designed to han
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/rohitchourey0809/Backend-MyIndiaa.git
    cd your-repo-name
 
 
@@ -77,6 +77,7 @@ Authentication
 
 
 Login: POST /api/auth/login
+
 `Request body: { "email": "johndoe@example.com", "password": "password123" }`
 
 
@@ -139,15 +140,12 @@ POST /api/orders (requires authentication)
 }
 ```
 
-Testing
-Use Postman or cURL to test the API endpoints. Ensure to include the JWT token in the Authorization header for protected routes.
 
-Example cURL request to get orders:
 
-bash
 
-curl -X GET http://localhost:8080/api/orders -H "Authorization: Bearer <your_jwt_token>"
 
+
+```
 Security Measures
 SSL/TLS for secure communication
 Input validation
@@ -157,4 +155,6 @@ Scalability and Performance Optimization
 Optimized database queries
 Efficient API design to handle high volume of requests
 Use of indexes in MongoDB for faster query execution
-License
+
+```
+
