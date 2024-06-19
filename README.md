@@ -48,7 +48,7 @@ This project is a backend application for an e-commerce platform designed to han
 1. Clone the repository:
    ```bash
    git clone https://github.com/rohitchourey0809/Backend-MyIndiaa.git
-   cd your-repo-name
+
 
 
 ## DeployedUrl
@@ -73,12 +73,24 @@ Authentication
 
 ```Register: POST /api/auth/register```
 
-```Request body: { "name": "John Doe", "email": "johndoe@example.com", "password": "password123" }```
+```
+{
+  "name": "RohitChourey",
+  "email": "testrohit@gmail.com",
+  "password": "test@123"
+}
+
+```
 
 
 Login: POST /api/auth/login
 
-`Request body: { "email": "johndoe@example.com", "password": "password123" }`
+```
+{
+  "email": "testrohit@gmail.com",
+  "password": "test@123"
+}
+```
 
 
 Products
@@ -86,18 +98,14 @@ Products
 `Get All Products:`
 
 ```
-
- GET /api/products
-
+GET /api/products
 ```
 
 
 `Create Product:` 
 
 ```
-
 POST /api/products
-
 ```
 
 
