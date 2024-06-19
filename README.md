@@ -57,3 +57,104 @@ This project is a backend application for an e-commerce platform designed to han
 http://backend-my-indiaa.vercel.app/
 
 ```
+
+Usage
+Start the server:
+
+
+npm start
+The server will be running at http://localhost:8080.
+
+API Documentation
+
+
+Authentication
+
+
+```Register: POST /api/auth/register```
+
+```Request body: { "name": "John Doe", "email": "johndoe@example.com", "password": "password123" }```
+
+
+Login: POST /api/auth/login
+`Request body: { "email": "johndoe@example.com", "password": "password123" }`
+
+
+Products
+
+`Get All Products:`
+
+```
+
+ GET /api/products
+
+```
+
+
+`Create Product:` 
+
+```
+
+POST /api/products
+
+```
+
+
+`Request body:`
+
+`{ "name": "Sample Product", "price": 29.99, "description": "This is a sample product", "category": "Sample Category", "stock": 100 }`
+
+
+## Orders
+
+
+`Get Orders:`
+
+
+ ```
+ GET /api/orders (requires authentication)
+
+ ```
+
+`Create Order: `
+
+```
+
+POST /api/orders (requires authentication)
+
+```
+
+
+`Request body:`
+
+```
+{
+  "products": [
+    {
+      "product": "product_id",
+      "quantity": 2
+    }
+  ],
+  "totalAmount": 59.98
+}
+```
+
+Testing
+Use Postman or cURL to test the API endpoints. Ensure to include the JWT token in the Authorization header for protected routes.
+
+Example cURL request to get orders:
+
+bash
+
+curl -X GET http://localhost:8080/api/orders -H "Authorization: Bearer <your_jwt_token>"
+
+Security Measures
+SSL/TLS for secure communication
+Input validation
+Rate limiting
+Secure storage of sensitive information
+Scalability and Performance Optimization
+Optimized database queries
+Efficient API design to handle high volume of requests
+Use of indexes in MongoDB for faster query execution
+License
